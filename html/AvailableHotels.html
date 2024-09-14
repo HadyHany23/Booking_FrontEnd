@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- custom css file link-->
     <link rel="stylesheet" href="../css/style.css">
+    <!--  library converts the HTML table into an Excel file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
@@ -48,6 +50,10 @@
                 </tr>
             </tbody>
         </table>
+        <div class="convert_btn">
+            <button id="word" onclick="exportTableToWord('myTable', 'TableDocument')">Export to Word</button>
+            <button id="excel" onclick="exportTableToExcel('myTable', 'table_data')">Export to Excel</button>
+        </div>
     </div>
 
 

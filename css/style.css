@@ -112,6 +112,7 @@ body {
   color: white;
 }
 
+
 /* End Form Pages */
 
 /* Start Navigation Bar */
@@ -153,10 +154,13 @@ body {
 /* Start Table pages */
 
 .table_cont {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: 0 auto;
   padding: 2rem;
   margin-top: 25rem;
+  gap: 5rem;
 }
 
 .table_cont .input {
@@ -168,8 +172,8 @@ body {
   padding: 1rem;
   color: black;
   border: none;
-  margin: 1rem auto;
   width: 50%;
+  align-self: center;
 }
 
 .table_cont .input label {
@@ -216,6 +220,26 @@ td:hover {
 
 .table_cont table td {
   font-size: var(--td-font);
+}
+
+.table_cont .convert_btn {
+  align-self: center;
+}
+
+.table_cont .convert_btn #word {
+  padding: 10px 20px;
+  border-radius: 1rem;
+  background: blue;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.table_cont .convert_btn #excel {
+  padding: 10px 20px;
+  border-radius: 1rem;
+  background: green;
+  color: var(--main-color);
+  cursor: pointer;
 }
 
 /* ENd Table Pages */

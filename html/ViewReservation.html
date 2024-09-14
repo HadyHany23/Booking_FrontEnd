@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- custom css file link-->
     <link rel="stylesheet" href="../css/style.css">
+    <!--  library converts the HTML table into an Excel file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +36,7 @@
                     <th onclick="sortTable(0)">Name</th>
                     <th onclick="sortTable(1)">paid</th>
                     <th onclick="sortTable(2)">Country</th>
+                    <th onclick="sortTable(3)">date</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,14 +44,20 @@
                     <td>ahmed</td>
                     <td>80$</td>
                     <td>ahmed01@gmail.com</td>
+                    <td>12/nov/2024</td>
                 </tr>
                 <tr>
                     <td>aly</td>
                     <td>60$</td>
                     <td>aly02@gmail.com</td>
+                    <td>12/oct/2023</td>
                 </tr>
             </tbody>
         </table>
+        <div class="convert_btn">
+            <button id="word" onclick="exportTableToWord('myTable', 'TableDocument')">Export to Word</button>
+            <button id="excel" onclick="exportTableToExcel('myTable', 'table_data')">Export to Excel</button>
+        </div>
     </div>
 
 
