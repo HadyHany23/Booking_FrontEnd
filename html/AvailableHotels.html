@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- custom css file link-->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- remixicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <!--  library converts the HTML table into an Excel file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
@@ -35,6 +37,8 @@
                     <th onclick="sortTable(0)">hotel name</th>
                     <th onclick="sortTable(1)">hotel price</th>
                     <th onclick="sortTable(2)">location</th>
+                    <th>edit</th>
+                    <th>delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,11 +46,15 @@
                     <td>hilton</td>
                     <td>80$</td>
                     <td>cairo</td>
+                    <td id="icons"><i class="ri-edit-line"></i></td>
+                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
                 </tr>
                 <tr>
                     <td>baron</td>
                     <td>60$</td>
                     <td>luxor</td>
+                    <td id="icons"><i class="ri-edit-line"></i></td>
+                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
                 </tr>
             </tbody>
         </table>
