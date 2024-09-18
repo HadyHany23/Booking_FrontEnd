@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: 1000000px;
 }
 
@@ -98,6 +98,7 @@ body {
   border: 2px solid black;
 }
 
+/* ////////deleteee////// */
 .main_cont .btn {
   width: 100%;
   padding: 1rem;
@@ -111,7 +112,21 @@ body {
   background-color: black;
   color: white;
 }
+/* ////////deleteee////// */
 
+.main_cont #submit_btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  font-size: large;
+}
+
+.main_cont #submit_btn:hover {
+  background-color: black;
+  color: white;
+}
 
 /* End Form Pages */
 
@@ -156,11 +171,14 @@ body {
 .table_cont {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  flex-wrap: wrap;
+  width: 80%;
   margin: 0 auto;
   padding: 2rem;
   margin-top: 25rem;
   gap: 5rem;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .table_cont .input {

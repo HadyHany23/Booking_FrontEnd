@@ -25,12 +25,23 @@
         <p class="heading">add employee</p>
         <form action="">
             <div class="input">
-                <label for="user_name">enter email</label>
-                <input type="text" id="user_name">
+                <label for="employee_name">enter employee name</label>
+                <input type="text" id="employee_name">
             </div>
             <div class="input">
-                <label for="user_password">enter password</label>
+                <label for="employee_email">enter employee email</label>
+                <input type="email" id="employee_email">
+            </div>
+            <div class="input">
+                <label for="employee_password">enter employee password</label>
                 <input type="text" id="user_password">
+            </div>
+            <div class="input">
+                <label for="employee_role">enter employee role</label>
+                <input type="number" min="0" max="1" id="employee_role">
+            </div>
+            <div class="input">
+                <input type="submit" id="submit_btn">
             </div>
         </form>
         <button class="btn">add employee</button>
