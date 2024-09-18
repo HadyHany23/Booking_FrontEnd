@@ -42,12 +42,6 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
-body {
-  /* overflow-x: hidden; */
-  height: 1000000px;
-}
-
 /* End Variables */
 
 /* start Form pages */
@@ -250,6 +244,7 @@ td:hover {
   background: blue;
   color: var(--main-color);
   cursor: pointer;
+  margin-right: 1rem;
 }
 
 .table_cont .convert_btn #excel {
