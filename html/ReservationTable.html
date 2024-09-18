@@ -7,19 +7,18 @@
     <title>Document</title>
     <!-- custom css file link-->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- remixicon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <!--  library converts the HTML table into an Excel file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
     <div class="navbar">
-        <a href="ViewReservation.html">view reservations</a>
-        <a href="AddReservation.html">add reservation</a>
-        <a href="AvailableHotels.html">availabilty</a>
-        <a href="AddHotel.html">add hotels</a>
-        <a href="AddEmployee.html">employees</a>
+        <a href="ReservationTable.html">view reservations</a>
+        <a href="ReservationForm.html">add reservation</a>
+        <a href="HotelTable.html">view hotel</a>
+        <a href="HotelForm.html">add hotels</a>
+        <a href="EmployeeTable.html">view employees</a>
+        <a href="EmployeeForm.html">add employees</a>
         <a id="profile" href="../index.html">profile</a>
     </div>
 
@@ -31,30 +30,28 @@
             <label for="search">search</label>
             <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
         </div>
+
         <table id="myTable">
             <thead>
                 <tr>
-                    <th onclick="sortTable(0)">hotel name</th>
-                    <th onclick="sortTable(1)">hotel price</th>
-                    <th onclick="sortTable(2)">location</th>
-                    <th>edit</th>
-                    <th>delete</th>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortTable(1)">paid</th>
+                    <th onclick="sortTable(2)">Country</th>
+                    <th onclick="sortTable(3)">date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>hilton</td>
+                    <td>ahmed</td>
                     <td>80$</td>
-                    <td>cairo</td>
-                    <td id="icons"><i class="ri-edit-line"></i></td>
-                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
+                    <td>ahmed01@gmail.com</td>
+                    <td>12/nov/2024</td>
                 </tr>
                 <tr>
-                    <td>baron</td>
+                    <td>aly</td>
                     <td>60$</td>
-                    <td>luxor</td>
-                    <td id="icons"><i class="ri-edit-line"></i></td>
-                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
+                    <td>aly02@gmail.com</td>
+                    <td>12/oct/2023</td>
                 </tr>
             </tbody>
         </table>

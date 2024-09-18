@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- custom css file link-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- remixicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!--  library converts the HTML table into an Excel file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="ReservationTable.html">view reservations</a>
+        <a href="ReservationForm.html">add reservation</a>
+        <a href="HotelTable.html">view hotel</a>
+        <a href="HotelForm.html">add hotels</a>
+        <a href="EmployeeTable.html">view employees</a>
+        <a href="EmployeeForm.html">add employees</a>
+        <a id="profile" href="../index.html">profile</a>
+    </div>
+
+
+
+
+    <div class="table_cont">
+        <div class="input">
+            <label for="search">search</label>
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
+        </div>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">hotel name</th>
+                    <th onclick="sortTable(1)">hotel price</th>
+                    <th onclick="sortTable(2)">location</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>hilton</td>
+                    <td>80$</td>
+                    <td>cairo</td>
+                    <td id="icons"><i class="ri-edit-line"></i></td>
+                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
+                </tr>
+                <tr>
+                    <td>baron</td>
+                    <td>60$</td>
+                    <td>luxor</td>
+                    <td id="icons"><i class="ri-edit-line"></i></td>
+                    <td id="icons"><i class="ri-delete-bin-line"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="convert_btn">
+            <button id="word" onclick="exportTableToWord('myTable', 'TableDocument')">Export to Word</button>
+            <button id="excel" onclick="exportTableToExcel('myTable', 'table_data')">Export to Excel</button>
+        </div>
+    </div>
+
+
+    <!-- custom js file link -->
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
