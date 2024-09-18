@@ -244,7 +244,7 @@ td:hover {
   background: blue;
   color: var(--main-color);
   cursor: pointer;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 
 .table_cont .convert_btn #excel {
