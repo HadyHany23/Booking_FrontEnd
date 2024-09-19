@@ -234,6 +234,10 @@ td {
   background-color: transparent;
 }
 
+th {
+  background-color: var(--main-color);
+}
+
 th:hover,
 td:hover {
   background: var(--third-color);
