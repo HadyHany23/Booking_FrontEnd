@@ -284,7 +284,7 @@ td:hover {
 
 @media (max-width: 600px) {
   .main_cont {
-    margin-top: 20rem;
+    margin-top: 25rem;
   }
   .convert_btn {
     flex-direction: column;
