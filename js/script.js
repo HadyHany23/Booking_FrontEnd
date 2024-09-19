@@ -65,23 +65,21 @@ function sortTable(columnIndex) {
   );
 }
 
-
 // Convert table to excel
-function exportTableToExcel(tableID, filename = '') {
+function exportTableToExcel(tableID, filename = "") {
   // Get the table
   let table = document.getElementById(tableID);
   let workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
 
   // Create filename
-  filename = filename ? filename + '.xlsx' : 'excel_data.xlsx';
+  filename = filename ? filename + ".xlsx" : "excel_data.xlsx";
 
   // Export the file
   XLSX.writeFile(workbook, filename);
 }
 
-
 // convert table to word
-function exportTableToWord(tableID, filename = '') {
+function exportTableToWord(tableID, filename = "") {
   // Get the table HTML
   let table = document.getElementById(tableID).outerHTML;
 
@@ -93,15 +91,39 @@ function exportTableToWord(tableID, filename = '') {
   let html = preHtml + table + postHtml;
 
   // Create a Blob of the table content
-  let blob = new Blob(['\ufeff', html], {
-    type: 'application/msword'
+  let blob = new Blob(["\ufeff", html], {
+    type: "application/msword",
   });
 
   // Create a link to trigger the download
-  let link = document.createElement('a');
+  let link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = filename ? filename + '.doc' : 'document.doc';
+  link.download = filename ? filename + ".doc" : "document.doc";
 
   // Trigger the download
   link.click();
+}
+
+// filter
+function filterTable() {
+  // Get the date range values
+  const startDate = new Date(document.getElementById("start-date").value);
+  const endDate = new Date(document.getElementById("end-date").value);
+
+  // Get all rows of the table
+  const table = document.getElementById("myTable");
+  const rows = table.getElementsByTagName("tr");
+
+  // Loop through table rows (skip the header row)
+  for (let i = 1; i < rows.length; i++) {
+    const dateCell = rows[i].getElementsByTagName("td")[12]; // Get the date from the 12th column
+    const rowDate = new Date(dateCell.innerText);
+
+    // Compare rowDate with startDate and endDate, hide or show rows accordingly
+    if (rowDate >= startDate && rowDate <= endDate) {
+      rows[i].style.display = ""; // Show the row
+    } else {
+      rows[i].style.display = "none"; // Hide the row
+    }
+  }
 }
