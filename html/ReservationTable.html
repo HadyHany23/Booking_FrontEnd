@@ -20,16 +20,19 @@
         <a href="EmployeeTable.html">view employees</a>
         <a href="EmployeeForm.html">add employees</a>
         <a id="profile" href="../index.html">profile</a>
+        <div class="search">
+            <div class="input">
+                <label for="search">search</label>
+                <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
+            </div>
+        </div>
     </div>
 
 
 
 
     <div class="table_cont">
-        <div class="input">
-            <label for="search">search</label>
-            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
-        </div>
+
 
         <table id="myTable">
             <thead>
@@ -73,13 +76,14 @@
                 </tr>
             </tbody>
         </table>
-        <div class="convert_btn">
-            <button id="word" onclick="exportTableToWord('myTable', 'TableDocument')">Export to Word</button>
-            <button id="excel" onclick="exportTableToExcel('myTable', 'table_data')">Export to Excel</button>
-        </div>
+
     </div>
 
-
+    <div class="convert_btn">
+        <button id="word" onclick="exportTableToWord('myTable', 'TableDocument')">Export to Word</button>
+        <button id="excel" onclick="exportTableToExcel('myTable', 'table_data')">Export to Excel</button>
+    </div>
+    
     <!-- custom js file link -->
     <script src="../js/script.js"></script>
 
