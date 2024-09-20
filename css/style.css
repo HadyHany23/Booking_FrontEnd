@@ -42,6 +42,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 /* End Variables */
 
 /* start Form pages */
@@ -89,6 +90,20 @@ html {
 
 .main_cont .input input:focus {
   border: 2px solid black;
+}
+
+.main_cont .input select {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: transparent;
+  color: black;
+}
+
+.main_cont .input .choose_role {
+  font-size: var(--td-font);
+  display: flex;
+  gap: 1rem;
 }
 
 .main_cont #submit_btn {
@@ -316,11 +331,13 @@ td:hover {
   .main_cont {
     margin-top: 25rem;
   }
+
   .convert_btn {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
+
   .convert_btn #word {
     width: fit-content;
   }
@@ -328,6 +345,7 @@ td:hover {
   .convert_btn #excel {
     width: fit-content;
   }
+
   .table_cont {
     margin-top: 35rem;
   }

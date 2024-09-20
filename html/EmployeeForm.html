@@ -26,19 +26,22 @@
         <form action="">
             <div class="input">
                 <label for="employee_name">enter employee name</label>
-                <input type="text" id="employee_name">
+                <input type="text" required id="employee_name">
             </div>
             <div class="input">
                 <label for="employee_email">enter employee email</label>
-                <input type="email" id="employee_email">
+                <input type="email" required id="employee_email">
             </div>
             <div class="input">
                 <label for="employee_password">enter employee password</label>
-                <input type="text" id="user_password">
+                <input type="text" required id="user_password">
             </div>
             <div class="input">
                 <label for="employee_role">enter employee role</label>
-                <input type="number" min="0" max="1" id="employee_role">
+                <div class="choose_role">
+                    <input type="radio" id="employee_role" name="role" value="admin"> admin
+                    <input type="radio" id="employee_role" name="role" value="employee"> employee
+                </div>
             </div>
             <div class="input">
                 <input type="submit" value="Add Employee" id="submit_btn">
