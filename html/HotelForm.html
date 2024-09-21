@@ -26,7 +26,7 @@
         <form action="">
             <div class="input">
                 <label for="hotel_name">enter hotel name</label>
-                <select id="hotel_name">
+                <select id="hotel_name" name="HotelName">
                     <option value="hilton">hilton</option>
                     <option value="baron">baron</option>
                     <option value="novotel">novotel</option>
@@ -34,7 +34,7 @@
             </div>
             <div class="input">
                 <label for="hotel_location">enter location</label>
-                <select id="hotel_location">
+                <select id="hotel_location" name="HotelLocation">
                     <option value="cairo">cairo</option>
                     <option value="alex">alex</option>
                     <option value="luxor">luxor</option>
@@ -42,7 +42,7 @@
             </div>
             <div class="input">
                 <label for="room_type">enter room type</label>
-                <select id="room_type">
+                <select id="room_type" name="RoomType">
                     <option value="single">single</option>
                     <option value="double">double</option>
                     <option value="triple">triple</option>
@@ -50,7 +50,7 @@
             </div>
             <div class="input">
                 <label for="hotel_price">enter price</label>
-                <input type="number" min="1" required id="hotel_price">
+                <input type="number" min="1" required id="hotel_price" name="Price">
             </div>
             <div class="input">
                 <input type="submit" value="Add Hotel" id="submit_btn">

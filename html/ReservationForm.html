@@ -26,19 +26,19 @@
         <form action="">
             <div class="input">
                 <label for="client_name">enter client full name</label>
-                <input type="text" required id="client_name">
+                <input type="text" required id="client_name" name="ClientName">
             </div>
             <div class="input">
                 <label for="client_email">enter client email</label>
-                <input type="text" required id="client_email">
+                <input type="text" required id="client_email" name="ClientEmail">
             </div>
             <div class="input">
                 <label for="client_id">enter client national ID or passport ID</label>
-                <input type="text" required id="client_id">
+                <input type="text" required id="client_id" name="ClientId">
             </div>
             <div class="input">
                 <label for="hotel_name">enter hotel name</label>
-                <select required id="hotel_name">
+                <select required id="hotel_name" name="HotelName">
                     <option value="hilton">hilton</option>
                     <option value="baron">baron</option>
                     <option value="novotel">novotel</option>
@@ -46,7 +46,7 @@
             </div>
             <div class="input">
                 <label for="hotel_location">enter hotel location</label>
-                <select required id="hotel_location">
+                <select required id="hotel_location" name="HotelLocation">
                     <option value="cairo">cairo</option>
                     <option value="alex">alex</option>
                     <option value="luxor">luxor</option>
@@ -54,56 +54,56 @@
             </div>
             <div class="input">
                 <label for="room_type1">enter room type 1</label>
-                <select required id="room_type">
+                <select required id="room_type1" name="RoomType1">
                     <option value="single">single</option>
                     <option value="double">double</option>
                     <option value="triple">triple</option>
                 </select>
                 <label for="room_type1_quantity">enter room type 1 quantity</label>
-                <input required type="number" min="1" required id="room_type1_quantity">
+                <input type="number" min="1" required id="room_type1_quantity" name="RoomType1Quantity">
             </div>
             <div class="input">
                 <label for="room_type2">enter room type 2</label>
-                <select id="room_type">
+                <select id="room_type2" name="RoomType2">
                     <option value="single">single</option>
                     <option value="double">double</option>
                     <option value="triple">triple</option>
                 </select>
                 <label for="room_type2_quantity">enter room type 2 quantity</label>
-                <input type="number" min="1" id="room_type2_quantity">
+                <input type="number" min="1" id="room_type2_quantity" name="RoomType2Quantity">
             </div>
             <div class="input">
                 <label for="room_type3">enter room type 3</label>
-                <select id="room_type">
+                <select id="room_type3" name="RoomType3">
                     <option value="single">single</option>
                     <option value="double">double</option>
                     <option value="triple">triple</option>
                 </select>
                 <label for="room_type3_quantity">enter room type 3 quantity</label>
-                <input type="number" min="1" id="room_type3_quantity">
+                <input type="number" min="1" id="room_type3_quantity" name="RoomType3Quantity">
             </div>
             <div class="input">
                 <label for="nights">enter number of nights</label>
-                <input required type="number" min="1" id="nights">
+                <input required type="number" min="1" id="nights" name="Nights">
             </div>
             <div class="input">
                 <label for="check_in">enter check_in date</label>
-                <input type="date" required id="check_in">
+                <input type="date" required id="check_in" name="CheckIn">
             </div>
             <div class="input">
                 <label for="check_out">enter check_out date</label>
-                <input type="date" required id="check_out">
+                <input type="date" required id="check_out" name="CheckOut">
             </div>
             <div class="input">
                 <label for="payment_situation">enter payment situation</label>
-                <select required id="payment_situation">
+                <select required id="payment_situation" name="PaymentSituation">
                     <option value="paid">paid</option>
                     <option value="pending">pending</option>
                 </select>
             </div>
             <div class="input">
                 <label for="total_price">total price</label>
-                <input type="number" required placeholder="10,000 EGP" disabled id="total_price">
+                <input type="number" required placeholder="10,000 EGP" disabled id="total_price" name="TotalPrice">
             </div>
             <div class="input">
                 <input type="submit" value="Add Reservation" id="submit_btn">
