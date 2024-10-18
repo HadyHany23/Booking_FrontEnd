@@ -76,7 +76,25 @@ html {
   width: 100%;
 }
 
-.main_cont .input label {
+.main_cont .def_input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: fit-content;
+  padding: 1rem;
+  color: black;
+  border: none;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.main_cont .input label,
+.main_cont .def_input label {
+  font-size: var(--label-font);
+}
+
+.main_cont .def_input p {
   font-size: var(--label-font);
 }
 
@@ -118,6 +136,12 @@ html {
 .main_cont #submit_btn:hover {
   background-color: black;
   color: white;
+}
+
+.main_cont .hr {
+  width: 100%;
+  height: 1rem;
+  background-color: black;
 }
 
 /* End Form Pages */

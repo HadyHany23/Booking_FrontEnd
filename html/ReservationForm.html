@@ -14,6 +14,7 @@
     <div class="navbar">
         <a href="ReservationTable.html">view reservations</a>
         <a href="ReservationForm.html">add reservation</a>
+        <a href="ReservationArchive.html">reservations archive</a>
         <a href="HotelTable.html">view hotel</a>
         <a href="HotelForm.html">add hotels</a>
         <a href="EmployeeTable.html">view employees</a>
@@ -52,6 +53,7 @@
                     <option value="luxor">luxor</option>
                 </select>
             </div>
+            <div class="hr"></div>
             <div class="input">
                 <label for="room_type1">enter room type 1</label>
                 <select required id="room_type1" name="RoomType1">
@@ -82,10 +84,7 @@
                 <label for="room_type3_quantity">enter room type 3 quantity</label>
                 <input type="number" min="1" id="room_type3_quantity" name="RoomType3Quantity">
             </div>
-            <div class="input">
-                <label for="nights">enter number of nights</label>
-                <input required type="number" min="1" id="nights" name="Nights">
-            </div>
+            <div class="hr"></div>
             <div class="input">
                 <label for="check_in">enter check_in date</label>
                 <input type="date" required id="check_in" name="CheckIn">
@@ -94,6 +93,11 @@
                 <label for="check_out">enter check_out date</label>
                 <input type="date" required id="check_out" name="CheckOut">
             </div>
+            <div class="def_input">
+                <label for="nights">enter number of nights:</label>
+                <p>5</p>
+            </div>
+            <div class="hr"></div>
             <div class="input">
                 <label for="payment_situation">enter payment situation</label>
                 <select required id="payment_situation" name="PaymentSituation">
@@ -101,18 +105,17 @@
                     <option value="pending">pending</option>
                 </select>
             </div>
-            <div class="input">
-                <label for="total_price">total price</label>
-                <input type="number" required placeholder="10,000 EGP" disabled id="total_price" name="TotalPrice">
+            <div class="def_input">
+                <label for="total_price">total price:</label>
+                <p>10000</p>
             </div>
             <div class="input">
                 <label for="deposit">deposit</label>
                 <input type="number" required id="deposit" name="Deposit">
             </div>
-            <div class="input">
-                <label for="total_remaining">total Remaining</label>
-                <input type="number" required placeholder="8,000 EGP" disabled id="total_remaining"
-                    name="TotalRemaining">
+            <div class="def_input">
+                <label for="total_remaining">total Remaining:</label>
+                <p class="input_p">8000</p>
             </div>
             <div class="input">
                 <input type="submit" value="Add Reservation" id="submit_btn">
